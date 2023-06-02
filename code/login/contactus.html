@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us</title>
+    <style>            body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:#333 ;
+        color: greenyellow;
+      
+      }</style>
+</head>
+<body>
+    <form>
+        Name: <input type="text" id="name" placeholder="your name here"><br></br>
+        Email : <input type="text" id="email" placeholder="email"><br></br>
+        Subject : <input type="text" id="subject" placeholder="Share your experience
+        "><br></br>
+
+        <input type="button" value="Submit" id="btn">
+        <button onclick="window.location.href = 'new.html'"; class="button" >Back</button>
+        <br><br><br>
+        <h3 id="res"></h3>
+    </form>
+
+</body>
+<script>
+    const submit = document.getElementById('btn');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const subject = document.getElementById('subject');
+    const result = document.getElementById('res');
+
+    submit.addEventListener('click',()=> {
+        var data = {
+            name : name.value,
+            email : email.value ,
+            subject : subject.value,  
+        };
+        console.log(data);
+        fetch('http://localhost:7000/api/hotel/contact',{
+            method : "POST",
+            headers : {
+                'Content-type' : 'application/json; charset=UTF-8'
+            },
+            body : JSON.stringify(data)
+         }).then(res=>{return res.json()})
+            .then(res=>{result.innerText=JSON.stringify(res)})
+
+    })
+    
+
+</script>
+</body>
+
+</html>
+
+</html>

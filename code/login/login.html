@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <style>
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#333 ;
+  color: greenyellow;
+
+}
+a{
+  color: greenyellow;
+    
+}
+        </style>
+    </head>
+
+    <body>
+        <h1>CUSTOMER LOGIN</h1>
+        <form >
+            cid:
+           <input
+                type="text"
+                value=""
+                id="cid" >    
+                <br/><br/>
+        FirstName:
+           <input
+                type="text"
+                value=""
+                id="firstname" >    
+                <br/><br/>
+            LastName:<input
+                type="text"
+                value=""
+                id="lastname"  >
+                <br/><br/>
+            Password:<input
+                type="text"
+                value=""
+                id="password">
+                <br/><br/>
+
+            Email:<input
+                type="text"
+                value=""  
+                id="email">
+                <br/><br/>
+
+            Address:<input
+                type="text"
+                value="" 
+                id="address" >
+                <br/><br/>
+            City:<input
+                type="text"
+                value=""
+                id="city" > 
+                <br/><br/>
+
+            Zip:<input
+                type="text"
+                value=""  
+                id="zip">
+                <br/><br/>
+            Phone number:<input
+                type="text"
+                value=""
+                id="phonenumber"  >
+                <br/><br/>
+                <input type="button" value="Sign-Up" id="btn">
+                <a href="G:\WEB DEVELOPMENT\Sublime Text\Mini Project\new.html">Back</a>
+            
+            <br><br><br>
+            <h3 id="res"></h3>
+        </form>
+
+    <script>
+           const signup = document.getElementById('btn');
+        const cid = document.getElementById('cid');
+        const firstname = document.getElementById('firstname');
+        const lastanme = document.getElementById('lastname');
+        const password = document.getElementById('password');
+        const address = document.getElementById('address');
+        const email = document.getElementById('email');
+
+        const city = document.getElementById('city');
+        const zip = document.getElementById('zip');
+        const phonenumber = document.getElementById('phonenumber');
+        const result = document.getElementById('res');
+
+
+        signup.addEventListener('click',()=> {
+            var data = {
+                firstname : firstname.value,
+                lastname : lastanme.value,
+                cid : Number(cid.value),
+                password : password.value ,
+                address :address.value,
+                city :city.value,
+                email :email.value,
+
+                zip : Number(zip.value),
+                phonenumber : Number(phonenumber.value)
+
+            };
+
+            console.log(data);
+            fetch('http://localhost:7000/api/hotel/customers',{
+                method : "POST",
+                headers : {
+                    'Content-type' : 'application/json; charset=UTF-8'
+                },
+                body : JSON.stringify(data)
+             }).then(res=>{return res.json()})
+                .then(res=>{result.innerText=JSON.stringify(res)})
+
+        })
+        
+
+    </script>
+    </body>
+
+</html>
