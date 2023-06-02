@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>jj</title>
+   <style type="text/css">
+      .gallery  {
+  --d: 6s; /* duration */
+  
+  display: grid;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg,#0000,#000 10% 90%,#0000);
+}
+.gallery > img {
+  grid-area: 1/1;
+  height: 200px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  animation: r var(--d) linear infinite;
+}
+.gallery > img:nth-child(2) {animation-delay: calc(1*var(--d)/-4)}
+.gallery > img:nth-child(3) {animation-delay: calc(2*var(--d)/-4)}
+.gallery > img:nth-child(4) {animation-delay: calc(3*var(--d)/-4)}
+
+@keyframes r {
+  75%    {transform: translate(-300%)}
+  75.01% {transform: translate( 100%)}
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #C2CBCE;
+}
+   </style>
+</head>
+<body>
+
+   <div class="gallery">
+  <img src="C:\Users\gayathri\Downloads\picnew1.jpg" alt="a dream catcher">
+  <img src="C:\Users\gayathri\Downloads\pic3.jpg" alt="a piano">
+  <img src="C:\Users\gayathri\Downloads\pic4.jpg" alt="a live concert">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Burger</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initialscale=1.0">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+	<style type="text/css">
+			body
+		{
+			 font-family: Arial, Helvetica, sans-serif;
+  			background-color:#333 ;
+		}
+		a {
+			  font-size: 16px;
+			  color: greenyellow;
+			  text-decoration: none;
+		
+
+			}
+		img
+		{
+			padding-left:50px ;
+		}
+
+		.c1
+		{
+			margin-left:100px ;
+			margin-bottom: 50px;
+		}
+		.c1 img
+		{
+			height: 30%;
+			width: 20%;
+			padding-top: 50px;
+		}
+		.c1 h2
+		{
+			
+			
+			margin-top:50px;
+			color: greenyellow;
+		}
+
+		.c1 p
+		{
+			float: right;
+			margin-right: 850px;
+			color: white;
+		}
+
+		.c2
+		{
+			float: right;
+			margin-right:86%;
+			color: greenyellow;
+		}
+
+		.dropbtn2
+		{
+  			background-color: grey ;
+  			color: greenyellow;
+  			float: right;
+			margin-right:89%;
+  			margin-top:20px;
+		}
+
+		.dropbtn2:hover
+		{
+		  background-color:red;
+		  color: black;
+		}
+	</style>
+</head>
+<body>
+
+      <img style="width: 10%; height:10%;border-radius: 10px;" src="C:\Users\gayathri\Downloads\new.jpg">
+      <br>
+      <a style="padding-left:50px;" href="new.html">Home/</a>
+      <a href="breakfast.html">Breakfast/</a>
+      <a style="color: orange;"href="pizza.html"><b>Burger</b></a> 
+    	<br>
+    	<div class="c1">
+    	<img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_16:9/k%2FPhoto%2FRecipes%2F2021-04-how-to-chicken-burgers%2F2021-04-19_ATK-52011">
+    	<h2>Burger</h2>
+    	<p>Bread crumbs and milk keep these chicken burgers unbelievably moist and flavourful. </p>
+
+    </div>
+
+    <div class="c2">
+    	<p style="color: greenyellow;" id="price">Price:$20</p>
+      <p style="color: greenyellow;">Quantity:</p>
+      <input id=demoInput type=number min=1 max=100 onchange="amount(id,'price',20)">
+
+      
+	
+</div>
+<button class="dropbtn2">Add to Cart</button>
+
+	<script>
+   function amount(id1,id2,p){
+    let value=$('#'+id1).val();
+    let res= value*p;
+    $('#'+id2).text("price:$"+res);
+  }
+</script>
+</body>
+</html>

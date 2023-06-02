@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img src="https://geekrobocook.com/wp-content/uploads/2021/02/Rava-Kesari-1200x900.jpg"alt="kesari"style="width:100%">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2j6EurPKGrCN_joeVJgauSks0D8ug2_ukTw&usqp=CAU"alt=""style="width:100%">
+  <img src="https://www.a2arestaurant.com/wp-content/uploads/2020/11/Nattu-Kozhi-varuval.jpg"alt="fish" style="width:100%"><div>Nattu kozhi</div>
+  <img src="https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-horizontal-1532030541.jpg?crop=0.8890666666666666xw:1xh;center,top&resize=1200:*" alt="paneertikka" style="width:100%">
+  <img src="https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=" alt="paneertikka" style="width:100%">
+  <img src="https://geekrobocook.com/wp-content/uploads/2021/02/Rava-Kesari-1200x900.jpg"alt="kesari" style="width:100%">
+  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/6f/8d/cf/veg-meals.jpg"alt="kesari" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

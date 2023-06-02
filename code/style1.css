@@ -1,0 +1,67 @@
+body
+{	
+	font-family: sans-serif;
+	background-color: black;
+}
+
+.topnav
+{
+	overflow:hidden;
+}
+
+.topnav a
+{
+	 float:right;
+	 color: white;
+	 padding: 10px 10px;
+	 font-size: 15px;
+	 text-align: center;
+	 text-decoration: none;
+}
+
+.topnav a:hover
+{
+	  color: greenyellow;
+}
+
+.btn
+{
+	float: right;
+	color:white;
+	background-color:black;
+	text-align:center;
+	font-size: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 40%;
+}
+
+.btn:hover 
+{
+	background-color: black;
+  color: greenyellow;
+}
+
+.c1
+{
+		float:right;
+	 color: white;
+	 background-color: black;
+	 padding: 10px 10px;
+	 font-size: 15px;
+	 text-align: center;
+	 text-decoration: none;
+}
+
+
+select{
+  border:none;
+  border-radius:5px;
+ 	background-color: white;
+
+}
+
+select:focus{
+  outline:none;
+  
+}

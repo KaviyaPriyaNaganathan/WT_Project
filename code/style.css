@@ -1,0 +1,23 @@
+.c1
+{
+
+	width: 300px;
+	border: 1px dotted yellow;
+	padding: 10px;
+	margin: auto;
+}
+h2
+{
+	color:yellow;
+	font-family: cursive;
+	font-size: 20px;
+	text-align: center;
+}
+p{
+	color: whitesmoke;
+}
+
+body
+{
+background-color: darkred;
+}
